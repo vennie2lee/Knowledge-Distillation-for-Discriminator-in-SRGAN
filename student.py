@@ -33,3 +33,24 @@ valid_ds = div2k_valid.dataset(batch_size=16, random_transform=True, repeat_coun
 student_gan_generator = st_generator()
 student_gan_generator.load_weights(weights_file('st_gan_generator.h5'))
 
+'''my_path = os.path.abspath('SAVE_PATH')
+def resolve_and_plot(lr_image_path, path):
+    rgba_image=PIL.Image.open(lr_image_path)
+    rgb_image = rgba_image.convert('RGB')
+    lr=rgb_image
+    
+    gan_sr = resolve_single(gan_generator, lr)
+    a = tensor_to_image(gan_sr)
+    
+    plt.figure(figsize=(11.05,11.05),frameon=False)
+    images = [gan_sr]
+    positions = [1]
+    my_file =f'{path}.png'
+    for i, (img, pos) in enumerate(zip(images, positions)):
+        plt.axis('off')
+        plt.imshow(img)
+        plt.xticks([])
+        plt.yticks([])
+        plt.savefig(os.path.join(my_path, my_file), bbox_inches='tight',pad_inches = 0)
+    
+resolve_and_plot(f'TEST_PATH', DATA_NAME)'''
