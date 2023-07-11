@@ -12,6 +12,7 @@ I use DIV2K dataset as a training set and use four benchmark datasets (Set5, Set
 You can download these datasets from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [benchmarks](https://cv.snu.ac.kr/research/EDSR/benchmark.tar).
 
 ### Pre-trained weights
+Make a directory called 'weights' and place the weights in it.
 You can download SRGAN weights from [weights](https://martin-krasser.de/sisr/weights-srgan.tar.gz) or train the SRGAN model to get the weights.  
 
 ### Usage
@@ -19,7 +20,7 @@ Train a teacher model and save the weights
 ```
 python teacher.py
 ```
-Train a student model to get a generator 
+Train a student model to get a generator model,
 ```
 python student.py
 ```
@@ -27,5 +28,6 @@ and train each student to distill the knowledge.
 ```
 python <GAN2G, G2G+AL, ...>.py
 ```
+
 ### Note
 
