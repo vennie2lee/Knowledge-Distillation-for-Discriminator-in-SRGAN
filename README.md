@@ -11,10 +11,21 @@ knowledge transfer techniques, the technique of conducting adversarial learning 
 I use DIV2K dataset as a training set and use four benchmark datasets (Set5, Set14, BSD100, Urban100).  
 You can download these datasets from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [benchmarks](https://cv.snu.ac.kr/research/EDSR/benchmark.tar).
 
-### Usage
-```
-python
-```
+### Pre-trained weights
+You can download SRGAN weights from [weights](https://martin-krasser.de/sisr/weights-srgan.tar.gz) or train the SRGAN model to get the weights.  
 
+### Usage
+Train a teacher model and save the weights
+```
+python teacher.py
+```
+Train a student model to get a generator 
+```
+python student.py
+```
+and train each student to distill the knowledge.
+```
+python <GAN2G, G2G+AL, ...>.py
+```
 ### Note
 
