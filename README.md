@@ -12,7 +12,7 @@ I use DIV2K dataset as a training set and use four benchmark datasets (Set5, Set
 You can download these datasets from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [benchmarks](https://cv.snu.ac.kr/research/EDSR/benchmark.tar).
 
 ### Pre-trained weights
-Make a directory called 'weights' and place the weights in it.
+Make a directory called 'weights' and place the weights in it.  
 You can download SRGAN weights from [weights](https://martin-krasser.de/sisr/weights-srgan.tar.gz) or train the SRGAN model to get the weights.  
 
 ### Usage
